@@ -5,11 +5,11 @@ def create_task(task):
     """Function enables user to add a task to a to-do list"""
     if not task or task.isspace():
         print('Please enter a task')
-    if not task.isalnum():
-        print('A task should be a string')
-    todo_list.append(task)
-    print('Your list: {0}'.format(todo_list))
-    return todo_list
+    for a_task in todo_list:
+        if a_task == task:
+            print('This task already exists in the list')
+        todo_list.append(task)
+        print(todo_list)
 
 
 def delete_task(task):
@@ -18,8 +18,8 @@ def delete_task(task):
         if a_task == task:
             todo_list.remove(task)
             print(todo_list)
-            return todo_list
-        print('That task does not exist in this list.')
+        else:
+            print('That task does not exist in this list.')
 
 
 def mark_as_finished(task):
@@ -36,6 +36,5 @@ def mark_as_finished(task):
 
 def delete_all_tasks():
     """Function to delete all tasks from a to-do list"""
-    todo_list.clear()
+    del todo_list[:]
     print(todo_list)
-    return todo_list
