@@ -2,7 +2,7 @@ todo_list = []
 
 
 def create_task(task):
-    """Function enables a user to add a task to a to-do list"""
+    """Function enables user to add a task to a to-do list"""
     if not task or task.isspace():
         print('Please enter a task')
     if not task.isalnum():
