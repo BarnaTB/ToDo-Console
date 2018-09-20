@@ -2,7 +2,16 @@ todo_list = []
 
 
 def create_task(task):
-    """Function enables user to add a task to a to-do list"""
+    """
+    Function adds a task to a to-do list using user input as
+    the task.
+
+    :param task:
+    Holds the task from user input which is then added to the to-do list.
+
+    :returns:
+    Returns the to-do list with the added task
+    """
     if task == '':
         print('You cannot enter an empty task!')
     if task in todo_list:
@@ -12,7 +21,15 @@ def create_task(task):
 
 
 def delete_task(task):
-    """Function enables a user to delete a specific task from a to-do list"""
+    """
+    Function deletes a specific task from the to-do list.
+
+    :param task:
+    Holds the task entered by the user which is to be deleted.
+
+    :returns:
+    A new list without the deleted task.
+    """
     for a_task in todo_list:
         if a_task == task:
             task_position = todo_list.index(task)
@@ -23,7 +40,15 @@ def delete_task(task):
 
 
 def mark_as_finished(task):
-    """Function enables user to mark a task as finished"""
+    """
+    Function marks a task as finished.
+
+    :param task:
+    Holds the task to entered by the user to be marked as finished.
+
+    :returns:
+    Returns to-do list with finished task.
+    """
     for a_task in todo_list:
         if a_task == task:
             finished_task = "{0} -finished".format(a_task)
@@ -34,6 +59,11 @@ def mark_as_finished(task):
 
 
 def delete_all_tasks():
-    """Function to delete all tasks from a to-do list"""
+    """
+    Function to delete all tasks from a to-do list
+    
+    :returns:
+    Empty to-do list
+    """
     del todo_list[:]
     print(todo_list)
