@@ -1,9 +1,13 @@
 from src.tasks import *
-from src.accounts import *
+from src.accounts import add_account
 
 
 def login_func():
-    print('Please select what you want to do!')
+    """
+    Function logs in  a user to their account and grants them access to other
+    resources.
+    """
+    print('************ Select what you wish to do ************')
     print('1. Add a task')
     print('2. Delete a task')
     print('3. Delete all tasks')
@@ -28,9 +32,17 @@ def login_func():
 
 
 def register_func(name, password):
+    """
+    Function registers a user using their name and password.
+
+    :param name:
+    Holds the name of the user from their input.
+
+    :param password:
+    Holds the password from their input
+    """
     add_account(name, password)
-    print('A new account was created for you!')
-    print('Please select what you want to do!')
+    print('************ Select what you wish to do ************')
     print('1. Add a task')
     print('2. Delete a task')
     print('3. Delete all tasks')
