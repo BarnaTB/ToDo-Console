@@ -1,4 +1,3 @@
-from src.tasks import *
 from src.accounts import *
 from utilities import login_func, register_func
 
